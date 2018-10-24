@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatOrder", "GreatOrder\GreatOrder.csproj", "{D59CF043-DE6B-4706-95F3-DA5F59542132}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatOrderTests", "GreatOrderTests\GreatOrderTests.csproj", "{78A388BF-D019-49C8-9ED0-FEADB578EDB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D59CF043-DE6B-4706-95F3-DA5F59542132}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D59CF043-DE6B-4706-95F3-DA5F59542132}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D59CF043-DE6B-4706-95F3-DA5F59542132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A388BF-D019-49C8-9ED0-FEADB578EDB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A388BF-D019-49C8-9ED0-FEADB578EDB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A388BF-D019-49C8-9ED0-FEADB578EDB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A388BF-D019-49C8-9ED0-FEADB578EDB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
