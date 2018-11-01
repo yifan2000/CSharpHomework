@@ -18,6 +18,11 @@ namespace WindowsFormsApp1
         public string KeyWord { get; set; }
         public Form1()
         {
+            this.Load += new EventHandler(Form1_Load);
+        }
+
+        void Form1_Load(object sender, EventArgs e)
+        {
             InitializeComponent();
             OrderService orderService = new OrderService();
             OrderDetails[] orderDetail1 = { new OrderDetails("A", 5, 20) };
@@ -25,7 +30,7 @@ namespace WindowsFormsApp1
             OrderDetails[] orderDetail2 = { new OrderDetails("B", 5, 7) };
             o.Add(new Order(2, "aab", orderDetail2));
             orderBindingSource.DataSource = o;
-            
+
             
             ////绑定查询条件
             textBox1.DataBindings.Add("Text", this, "KeyWord");
@@ -64,7 +69,7 @@ namespace WindowsFormsApp1
         {
 
 
-            Form1 newForm = new Form1();
+            //Form1 newForm = new Form1();
             string ordername = textBox3.Text;
             int orderID = int.Parse(textBox4.Text);
             string goodname = textBox5.Text;
@@ -73,13 +78,44 @@ namespace WindowsFormsApp1
             //增添
 
             OrderDetails[] orderDetail3 = { new OrderDetails(goodname, goodID, price) };
-            o.Add(new Order(orderID, ordername, orderDetail3));
-            orderBindingSource.DataSource = o;
+          
+            this.orderBindingSource.Add(new Order(orderID, ordername, orderDetail3));
+            this.dataGridView1.DataSource =this.orderBindingSource;
 
-            newForm.Show();
+            //newForm.Show();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)//删除
+        {
+            List<Order> oo = new List<Order>();
+            int removeNumber = int.Parse(textBox2.Text);
+            
+            foreach (Order TheOrders in o)
+            {
+                if (TheOrders.NextOrderID == removeNumber)
+                {
+                    oo.Add(TheOrders);
+                }
+            }
+            foreach(var oos in oo)
+            {
+                o.Remove(oos);
+            }
+            orderBindingSource.DataSource = null;
+            orderBindingSource.DataSource = o;
+        }
+
+        private void button4_Click(object sender, EventArgs e)//修改
+        {
+            
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
         }

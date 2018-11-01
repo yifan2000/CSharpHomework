@@ -46,6 +46,8 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.nextGoodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nextGoodNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nextGoodpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,6 +121,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "根据订单号删除";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 
@@ -189,6 +192,25 @@
             this.dataGridView2.TabIndex = 13;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("宋体", 7F);
+            this.button4.Location = new System.Drawing.Point(306, 46);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(81, 33);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "按id修改";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(393, 54);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(64, 25);
+            this.textBox8.TabIndex = 15;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            // 
             // nextGoodNameDataGridViewTextBoxColumn
             // 
             this.nextGoodNameDataGridViewTextBoxColumn.DataPropertyName = "NextGoodName";
@@ -215,6 +237,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -257,6 +281,8 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.DataGridViewTextBoxColumn nextGoodNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nextGoodNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nextGoodpriceDataGridViewTextBoxColumn;

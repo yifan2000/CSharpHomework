@@ -33,6 +33,7 @@ namespace GreatOrder
         public string NextCilentName
         {
             get { return CilentName; }
+            set {; }
         }
         public int NextOrderID
         {
