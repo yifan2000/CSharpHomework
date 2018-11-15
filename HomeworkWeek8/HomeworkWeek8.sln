@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatOrder", "GreatOrder\GreatOrder.csproj", "{AD14D6E0-3D8D-4078-8337-FA9A0F0B15FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{ACA86682-CFD8-45F7-8C85-A09B5AB1D922}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD14D6E0-3D8D-4078-8337-FA9A0F0B15FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD14D6E0-3D8D-4078-8337-FA9A0F0B15FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD14D6E0-3D8D-4078-8337-FA9A0F0B15FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD14D6E0-3D8D-4078-8337-FA9A0F0B15FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA86682-CFD8-45F7-8C85-A09B5AB1D922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA86682-CFD8-45F7-8C85-A09B5AB1D922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA86682-CFD8-45F7-8C85-A09B5AB1D922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA86682-CFD8-45F7-8C85-A09B5AB1D922}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AF7B834-7CA7-4189-9090-CDB5BE970EA4}
+	EndGlobalSection
+EndGlobal
