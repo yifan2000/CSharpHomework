@@ -2,33 +2,27 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl"
 >
-    <xsl:output method="xml" indent="yes"/>
-
-    <xsl:template match="@* | node()">
-        <xsl:copy>
-            <xsl:apply-templates select="@* | node()"/>
-          <Order>
-            <OrderId>20181111001</OrderId>
-            <CilentName>aaa</CilentName>
-            <CilentTelephoneNumber>10086</CilentTelephoneNumber>
-            <orderDetails>
-              <goodName>A</goodName>
-              <goodNumber>5</goodNumber>
-              <goodPrice>20</goodPrice>
-          </orderDetails>
-          </Order>
-          <Order>
-            <OrderId>20181111002</OrderId>
-            <CilentName>aab</CilentName>
-            <CilentTelephoneNumber>10085</CilentTelephoneNumber>
-            <orderDetails>
-              <goodName>B</goodName>
-              <goodNumber>5</goodNumber>
-              <goodPrice>7</goodPrice>
-            </orderDetails>
-          </Order>
-          
-      
-        </xsl:copy>
-    </xsl:template>
+          <xsl:template match="/ArrayOfOrder">
+          <html>
+			<head>
+				<title>订单列表</title>
+			</head>
+			<body>
+				<table border="1" cellspacing="0">
+					<tr>
+						<th>订单号</th>
+						<th>客户名</th>
+						<th>客户手机号码</th>
+					</tr>
+					<xsl:for-each select="orders">
+						<tr>
+							<td><xsl:value-of select="NextOrderID" /></td>
+							<td><xsl:value-of select="NextCilentName" /></td>
+							<td><xsl:value-of select="NextCilentTelephoneNumber" /></td>
+						</tr>
+					</xsl:for-each>
+				</table>
+			</body>
+		</html>
+      	</xsl:template>
 </xsl:stylesheet>

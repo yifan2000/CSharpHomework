@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nextCilentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nextOrderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NextCilentTelephoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -54,6 +51,9 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.nextCilentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nextOrderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NextCilentTelephoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nextorderDetailsBindingSource)).BeginInit();
@@ -75,27 +75,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(484, 318);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // nextCilentNameDataGridViewTextBoxColumn
-            // 
-            this.nextCilentNameDataGridViewTextBoxColumn.DataPropertyName = "NextCilentName";
-            this.nextCilentNameDataGridViewTextBoxColumn.HeaderText = "客户名";
-            this.nextCilentNameDataGridViewTextBoxColumn.Name = "nextCilentNameDataGridViewTextBoxColumn";
-            this.nextCilentNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nextOrderIDDataGridViewTextBoxColumn
-            // 
-            this.nextOrderIDDataGridViewTextBoxColumn.DataPropertyName = "NextOrderID";
-            this.nextOrderIDDataGridViewTextBoxColumn.HeaderText = "订单编号";
-            this.nextOrderIDDataGridViewTextBoxColumn.Name = "nextOrderIDDataGridViewTextBoxColumn";
-            this.nextOrderIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // NextCilentTelephoneNumber
-            // 
-            this.NextCilentTelephoneNumber.DataPropertyName = "NextCilentTelephoneNumber";
-            this.NextCilentTelephoneNumber.HeaderText = "联系方式";
-            this.NextCilentTelephoneNumber.Name = "NextCilentTelephoneNumber";
-            this.NextCilentTelephoneNumber.ReadOnly = true;
             // 
             // orderBindingSource
             // 
@@ -261,6 +240,27 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // nextCilentNameDataGridViewTextBoxColumn
+            // 
+            this.nextCilentNameDataGridViewTextBoxColumn.DataPropertyName = "NextCilentName";
+            this.nextCilentNameDataGridViewTextBoxColumn.HeaderText = "客户名";
+            this.nextCilentNameDataGridViewTextBoxColumn.Name = "nextCilentNameDataGridViewTextBoxColumn";
+            this.nextCilentNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nextOrderIDDataGridViewTextBoxColumn
+            // 
+            this.nextOrderIDDataGridViewTextBoxColumn.DataPropertyName = "NextOrderID";
+            this.nextOrderIDDataGridViewTextBoxColumn.HeaderText = "订单编号";
+            this.nextOrderIDDataGridViewTextBoxColumn.Name = "nextOrderIDDataGridViewTextBoxColumn";
+            this.nextOrderIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // NextCilentTelephoneNumber
+            // 
+            this.NextCilentTelephoneNumber.DataPropertyName = "NextCilentTelephoneNumber";
+            this.NextCilentTelephoneNumber.HeaderText = "联系方式";
+            this.NextCilentTelephoneNumber.Name = "NextCilentTelephoneNumber";
+            this.NextCilentTelephoneNumber.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -317,10 +317,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nextGoodpriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridViewTextBoxColumn nextCilentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nextOrderIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn NextCilentTelephoneNumber;
-        private System.Windows.Forms.Button button5;
     }
 }
 

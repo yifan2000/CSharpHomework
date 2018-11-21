@@ -17,6 +17,7 @@ using static GreatOrder.OrderDetails;
 
 namespace WindowsFormsApp1
 {
+
     public partial class Form1 : Form
     {
         public List<Order> o = new List<Order>();
@@ -174,24 +175,33 @@ namespace WindowsFormsApp1
 
         }
         //打印订单
+        public static string ConvertXML(XmlDocument InputXMLDocument, string XSLTFilePath
+, XsltArgumentList XSLTArgs)
+        {
+            System.IO.StringWriter sw = new System.IO.StringWriter();
+            XslCompiledTransform xslTrans = new XslCompiledTransform();
+            xslTrans.Load(XSLTFilePath);
+            xslTrans.Transform(InputXMLDocument.CreateNavigator(), XSLTArgs, sw);
+            return sw.ToString();
+        }
         private void button5_Click(object sender, EventArgs e)
         {
-            
-                XmlDocument doc = new XmlDocument();
-                doc.Load(@"..\..\Order.xml");
 
-                XPathNavigator nav = doc.CreateNavigator();
-                nav.MoveToRoot();
-
-                XslCompiledTransform xt = new XslCompiledTransform();
-                xt.Load(@"..\..\Order.xslt");
-
-                FileStream outFileStream = File.OpenWrite(@"..\..\Order.html");
-                XmlTextWriter writer =
-                    new XmlTextWriter(outFileStream, System.Text.Encoding.UTF8);
-                xt.Transform(nav, null, writer);
-
+            //XmlDocument doc = new XmlDocument();
+            //doc.Load(@"..\Order.xml");
+            //string returnhtml = ConvertXML(doc, @"..\Order.xslt", new XsltArgumentList());
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"..\..\Order.xml");
+            XPathNavigator nav = doc.CreateNavigator();
+            nav.MoveToRoot();
+            XslCompiledTransform xt = new XslCompiledTransform();
+            xt.Load(@"..\..\Order.xslt");
+            FileStream outFileStream = File.OpenWrite(@"..\..\Order.html");
+            XmlTextWriter writer =
+            new XmlTextWriter(outFileStream, System.Text.Encoding.UTF8);
+            xt.Transform(nav, null, writer);
 
         }
+
     }
 }

@@ -90,7 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Order.xml" />
-    <Content Include="Order.xslt" />
+    <Content Include="Order.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
